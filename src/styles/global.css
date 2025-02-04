@@ -1,0 +1,311 @@
+/* ================================= */
+/*  RESET E AJUSTES GERAIS */
+/* ================================= */
+
+/* Remove margens e paddings padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+  }
+  
+  /* Define um espaçamento para compensar a navbar fixa */
+  section {
+    padding-top: 100px;
+    scroll-margin-top: 100px;
+  }
+  
+  /* ================================= */
+  /*  NAVBAR */
+  /* ================================= */
+  
+  /* Navbar fixa */
+  .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: #f8f5e8;
+    padding: 10px 0;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Container da navbar */
+  .navbar-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  /* Estilizando a logo */
+  .logo img {
+    height: 60px;
+  }
+  
+  /* Ajustando o menu */
+  .navbar-menu {
+    flex: 1;
+    justify-content: flex-end;
+    display: flex;
+    background: transparent !important;
+    border: none !important;
+  }
+  
+/* Estilizando os itens do menu */
+.navbar-menu .ant-menu-item {
+    font-weight: 500;
+    font-size: 16px;
+    color: #c4a03c !important;
+    position: relative;
+    padding: 10px 15px;
+    background: transparent !important;
+    border: none !important;
+  }
+  
+
+  
+  
+  /* Garantindo que o menu não tenha bordas visíveis */
+  .navbar-menu {
+    background: transparent !important;
+    border: none !important;
+  }
+
+  
+  /* ================================= */
+  /*  BOTÕES DE IDIOMA */
+  /* ================================= */
+  
+  .language-buttons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .lang-button {
+    border-radius: 8px;
+    font-weight: bold;
+    background: transparent;
+    border: 1px solid #333;
+    padding: 5px 12px;
+  }
+  
+  .lang-button.active {
+    background: #1c2713;
+    color: white;
+    border: 1px solid #1c2713;
+  }
+  
+  .lang-button:hover {
+    background: #ddd;
+  }
+  
+  /* ================================= */
+  /*  HERO SECTION */
+  /* ================================= */
+  
+  .hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-image: url("/public/hero-image.jpg");
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+  }
+  
+  .hero-content {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  /* ================================= */
+  /*  ABOUT */
+  /* ================================= */
+  
+  .about {
+    padding: 50px;
+    background-color: #f8f5e8;
+    text-align: center;
+  }
+  
+  /* ================================= */
+  /*  OUR PROPOSE */
+  /* ================================= */
+  
+  .propose {
+    padding: 50px;
+    background-color: #ddd;
+    text-align: center;
+  }
+  
+  .propose-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding-top: 20px;
+  }
+  
+  .propose-card {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* ================================= */
+  /*  COMMODITIES */
+  /* ================================= */
+  
+  .commodities {
+    padding: 50px;
+    background-color: #f8f5e8;
+    text-align: center;
+  }
+  
+  .commodities-grid {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .commodity-card {
+    flex: 0 0 auto;
+    width: 200px;
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .commodity-card img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  /* ================================= */
+  /*  CONTACT */
+  /* ================================= */
+  
+  .contact {
+    padding: 50px;
+    background-color: #fff;
+    text-align: center;
+  }
+  
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 300px;
+    margin: 20px auto;
+  }
+  
+  .contact-info {
+    margin-top: 20px;
+  }
+  
+  /* ================================= */
+  /*  RESPONSIVIDADE */
+  /* ================================= */
+  
+  @media (max-width: 768px) {
+    .navbar {
+      padding: 5px 0;
+    }
+  
+    .hero {
+      height: 80vh;
+      padding: 20px;
+    }
+  
+    .propose-grid {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  
+    .commodities-grid {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  
+    .commodity-card {
+      width: 90%;
+      max-width: 300px;
+    }
+  
+    .contact-form {
+      width: 90%;
+    }
+  }
+  
+  /* ================================= */
+  /*  ANIMAÇÕES */
+  /* ================================= */
+  
+  button, .ant-btn {
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .propose-card, .commodity-card {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .propose-card:hover, .commodity-card:hover {
+    transform: scale(1.05);
+  }
+  
+  /* ================================= */
+  /*  TIPOGRAFIA */
+  /* ================================= */
+  
+  h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  /* Remove o estilo azul padrão do Ant Design */
+.ant-menu-item::after {
+    border-bottom: none !important; /* Remove a borda azul padrão */
+  }
+  /* Ajustando a cor do item ativo e do hover */
+.navbar-menu .ant-menu-item:hover,
+.navbar-menu .ant-menu-item-selected {
+  color: #c4a03c !important;
+  background: transparent !important;
+}
+
+/* Linha abaixo do item ativo */
+.navbar-menu .ant-menu-item-selected::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 10%;
+    width: 80%;
+    height: 2px;
+    background: #c4a03c !important; /* Agora a linha tem a cor correta */
+    border-bottom: none !important; /* Forçando a remoção do estilo azul */
+  }
