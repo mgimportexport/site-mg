@@ -317,7 +317,6 @@ section {
 
 
 
-
 /* ================================= */
 /*  COMMODITIES */
 /* ================================= */
@@ -341,10 +340,9 @@ section {
 /* Container principal */
 .commodities-container {
   display: flex;
+  flex-direction: column; /* Agora os botões ficam abaixo da grade */
   align-items: center;
   justify-content: center;
-  gap: 10px;
-  position: relative;
 }
 
 /* Grade de produtos */
@@ -385,6 +383,13 @@ section {
   color: #444;
 }
 
+/* Container dos botões */
+.commodities-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px; /* Espaço entre os cards e os botões */
+}
+
 /* Botões de navegação */
 .carousel-btn {
   background: #37422e;
@@ -398,16 +403,6 @@ section {
 
 .carousel-btn:hover {
   background: #2a331f;
-}
-
-.left-btn {
-  position: absolute;
-  left: 0;
-}
-
-.right-btn {
-  position: absolute;
-  right: 0;
 }
 
 /* ================================= */

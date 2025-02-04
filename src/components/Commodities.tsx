@@ -6,6 +6,7 @@ const commoditiesData = [
   { name: "Chicken Paw", description: "Chicken paws have a richer and deeper flavour profile.", image: "/public/chicken-paw.jpg" },
   { name: "Aluminum", description: "It has properties such as lightness, resistance and durability.", image: "/public/aluminum.jpg" },
   { name: "Wheat", description: "Grass widely cultivated for its seed, a cereal grain that is a staple food around the world.", image: "/public/wheat.jpg" },
+  
 ];
 
 const Commodities = () => {
@@ -13,7 +14,6 @@ const Commodities = () => {
     <section id="commodities" className="commodities">
       <h2 className="commodities-title">Commodities</h2>
       <div className="commodities-container">
-        <button className="carousel-btn left-btn">{"<"}</button>
         <div className="commodities-grid">
           {commoditiesData.map((item, index) => (
             <div key={index} className="commodity-card">
@@ -23,7 +23,11 @@ const Commodities = () => {
             </div>
           ))}
         </div>
-        <button className="carousel-btn right-btn">{">"}</button>
+        {/* Botões agora estão abaixo da grade */}
+        <div className="commodities-buttons">
+          <button className="carousel-btn">{"<"}</button>
+          <button className="carousel-btn">{">"}</button>
+        </div>
       </div>
     </section>
   );
