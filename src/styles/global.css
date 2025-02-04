@@ -10,15 +10,15 @@
   }
   
   body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     background-color: #f8f8f8;
   }
   
   /* Define um espaçamento para compensar a navbar fixa */
   section {
-    padding-top: 100px;
     scroll-margin-top: 100px;
   }
+ 
   
   /* ================================= */
   /*  NAVBAR */
@@ -31,7 +31,7 @@
     width: 100%;
     z-index: 1000;
     background: #f8f5e8;
-    padding: 10px 0;
+    padding: 20px 0;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
   }
   
@@ -114,30 +114,120 @@
   .hero {
     height: 100vh;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+    align-items: flex-end; /* Move o conteúdo para a parte inferior */
+    justify-content: flex-start; /* Alinha o conteúdo à esquerda */
+    text-align: left;
     background-image: url("/public/hero-image.jpg");
     background-size: cover;
     background-position: center;
-    color: #fff;
+    color: #EAD46C;
+    padding: 50px; /* Espaçamento interno para afastar o texto das bordas */
   }
   
+  /* Conteúdo da hero */
   .hero-content {
-    background: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    border-radius: 8px;
+    margin-bottom: 100px; /* Ajusta a altura do texto */
+    padding-left: 50px; /* Mantém o espaçamento do texto */
   }
   
-  /* ================================= */
-  /*  ABOUT */
-  /* ================================= */
-  
-  .about {
-    padding: 50px;
-    background-color: #f8f5e8;
-    text-align: center;
+  /* Título principal */
+  .hero-content h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    font-style: italic;
+    margin-bottom: 10px;
   }
+  
+  /* Subtítulo */
+  .hero-content span {
+    font-size: 1.5rem;
+    display: block;
+  }
+/* ================================= */
+/*  ABOUT US */
+/* ================================= */
+
+.about {
+  padding: 80px 0px;
+  background-color: #f8f5e8;
+}
+
+/* Título */
+.about-title {
+  font-size: 2rem;
+  font-weight: bold;
+  font-style: italic;
+  color: #1E1E1E;
+  margin-bottom: 40px;
+  padding-left: 20px;
+}
+
+/* PRIMEIRA SEÇÃO - Imagem grande e texto sobreposto */
+.about-top {
+  position: relative;
+  width: 100vw; /* Faz a seção ocupar toda a largura da tela */
+  max-width: 100%;
+}
+
+.about-image img {
+  width: 100%;
+  height: 300px; /* Diminui a altura da imagem */
+  object-fit:cover; /* Evita distorções e mantém o recorte adequado */
+  border-radius: 0; /* Remove qualquer arredondamento */
+  display: block; /* Evita espaçamentos indesejados */
+}
+
+
+
+.about-text {
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  text-align: left;
+  font-size: 1.1rem;
+  color: #333;
+}
+/* SEGUNDA SEÇÃO - Texto e imagem ao lado */
+
+.about-divider-text {
+  text-align: right; /* Alinha o texto à direita */
+  font-size: 1.2rem;
+  color: #333;
+  font-weight: normal;
+  max-width: 900px; /* Mantém uma largura equilibrada */
+  margin: 40px auto 20px auto; /* Centraliza e dá espaço entre as seções */
+  padding-right: 20px; /* Mantém um espaço da borda */
+}
+
+
+/* TERICEIRA SEÇÃO - Texto e imagem ao lado */
+.about-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 40px auto 0;
+  gap: 20px;
+}
+
+.about-bottom-text {
+  font-size: 1.2rem;
+  color: #333;
+  max-width: 600px;
+}
+
+.about-secondary-image img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 10px;
+}
   
   /* ================================= */
   /*  OUR PROPOSE */
@@ -249,6 +339,24 @@
   
     .contact-form {
       width: 90%;
+    }
+    .about-content {
+      flex-direction: column;
+      position: static;
+    }
+  
+    .about-text {
+      position: static;
+      max-width: 100%;
+    }
+  
+    .about-secondary {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .about-secondary p {
+      text-align: center;
     }
   }
   

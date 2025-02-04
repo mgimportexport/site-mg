@@ -18,10 +18,10 @@ const Navbar = () => {
 
     // Detecta qual seção está visível ao rolar a página
     useEffect(() => {
-        const sections = ["about", "propose", "commodities", "contact"];
+        const sections = ["hero","about", "propose", "commodities", "contact"];
 
         const handleScroll = () => {
-            let current = "about"; // Default para evitar erros
+            let current = "hero"; // Default para evitar erros
             const scrollPosition = window.scrollY + 100; // Compensação da navbar
 
             sections.forEach((section) => {

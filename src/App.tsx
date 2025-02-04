@@ -9,16 +9,19 @@ const App = () => {
   return (
     <>
       <Navbar />
-      <section id="about" style={{ paddingTop: "100px" }}>
+      <section id="hero" >
+      <Hero />
+      </section>
+      <section id="about" >
         <About />
       </section>
-      <section id="propose" style={{ paddingTop: "100px" }}>
+      <section id="propose" >
         <Propose />
       </section>
-      <section id="commodities" style={{ paddingTop: "100px" }}>
+      <section id="commodities" >
         <Commodities />
       </section>
-      <section id="contact" style={{ paddingTop: "100px" }}>
+      <section id="contact" >
         <Contact />
       </section>
 
