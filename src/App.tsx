@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
@@ -8,24 +9,28 @@ import Contact from "./components/Contact";
 const App = () => {
   return (
     <>
+      {/* Define o título e o ícone da aba */}
+      <Helmet>
+        <title>MG</title>
+        <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+      </Helmet>
+
       <Navbar />
-      <section id="hero" >
-      <Hero />
+      <section id="hero">
+        <Hero />
       </section>
-      <section id="about" >
+      <section id="about">
         <About />
       </section>
-      <section id="propose" >
+      <section id="propose">
         <Propose />
       </section>
-      <section id="commodities" >
+      <section id="commodities">
         <Commodities />
       </section>
-      <section id="contact" >
+      <section id="contact">
         <Contact />
       </section>
-
-
     </>
   );
 };

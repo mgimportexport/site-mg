@@ -31,22 +31,21 @@ section {
   z-index: 1000;
   background: #f8f5e8;
   padding: 20px 0;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 /* Container da navbar */
 .navbar-content {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  max-width: 1100px;
+  justify-content: left;
+  max-width: 100%;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 40px;
 }
 
 /* Estilizando a logo */
 .logo img {
-  height: 60px;
+  height: 100px;
 }
 
 /* Ajustando o menu */
@@ -420,26 +419,40 @@ section {
 /*  CONTACT */
 /* ================================= */
 
+/* ================================= */
+/*  CONTACT */
+/* ================================= */
+
+/* ================================= */
+/*  CONTACT */
+/* ================================= */
+
 .contact {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  max-width: 100%;
   background-color: #f8f5e8;
-  padding: 50px 0;
 }
 
-/* Layout principal */
-.contact-container {
+/* Área principal do contato (formulário + imagem) */
+.contact-main {
   display: flex;
-  align-items: stretch;
   justify-content: space-between;
-  max-width: 1200px;
-  margin: 0 auto;
-  background-color: #f8f5e8;
+  align-items: stretch;
+  height: 80vh; /* Ajusta a altura sem remover o rodapé */
+  min-height: 95vh;
 }
 
 /* Área do formulário */
 .contact-form-container {
   flex: 1;
-  padding: 40px;
+  padding: 50px;
   text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 200px; 
 }
 
 .contact-title {
@@ -451,63 +464,114 @@ section {
 
 .contact-subtitle {
   margin-bottom: 20px;
-  font-size: 1rem;
+  font-size: 20px;
+  color: #1E1E1E;
+  font-family: Roboto;
+  font-weight: 400;
 }
 
-.contact-form {
+.contact-form div {
   display: flex;
-  flex-direction: column;
-  gap: 10px;
-  max-width: 400px;
+  align-items: center;
+  gap: 10px; /* Espaço entre label e input */
+  margin-bottom: 10px;
 }
 
-.contact-form label {
+.contact-label {
+  font-size: 16px;
   font-weight: bold;
+  color: #1E1E1E;
+  white-space: nowrap; /* Evita que o texto do label quebre linha */
+  width: 120px; /* Define uma largura fixa para alinhamento */
+  text-align: right; /* Alinha os rótulos corretamente */
+}
+
+.contact-input,
+.contact-textarea {
+  flex: 1; /* Faz o input ocupar o restante do espaço disponível */
+  width: 80% !important; /* Permite ajuste dinâmico de largura */
+}
+
+.contact-textarea {
+  height: 100px; /* Ajuste a altura conforme necessário */
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
   font-size: 14px;
-  color: #333;
+  resize: none; /* Impede que o usuário redimensione */
+}
+
+.char-counter {
+  font-size: 12px;
+  color: gray;
+  text-align: right;
+  margin-top: 5px;
+  margin-right: 5px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+.button-container {
+  display: flex;
+  justify-content: flex-end; /* Alinha o botão à direita */
+  margin-top: 10px;
 }
 
 .contact-submit {
-  background-color: #1c2713;
-  color: white;
-  margin-top: 10px;
+  font-family: Roboto;
+  font-weight: bold;
+  width: 120px;
+  padding: 8px 12px;
+  font-size: 14px;
+  background-color: #1F4037;
+  color: #D3AF37;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-/* Imagem */
+.contact-submit:hover,
+.contact-submit:focus {
+  background-color: #1F4037 !important; /* Mantém a cor original */
+  color: #D3AF37 !important; /* Mantém a cor do texto original */
+  opacity: 1; /* Garante que não haja mudança de opacidade */
+  border: none !important;
+}
+
+.contact-submit {
+  pointer-events: auto;
+}
+
+
+
+
+
+/* Imagem lateral */
 .contact-image {
   flex: 1;
   background: url("/public/contact-image.jpg") center/cover no-repeat;
+  margin-top: 80px;
 }
 
-/* Rodapé */
+/* Rodapé do contato */
 .contact-footer {
   background-color: #1c2713;
   color: white;
+  padding: 40px 20px;
   text-align: center;
-  padding: 30px;
 }
 
-.contact-whatsapp-title {
-  font-size: 1.2rem;
+.contact-footer a {
+  color: #e6c55a;
   font-weight: bold;
-  color: #e4c765;
+  text-decoration: none;
 }
 
-.whatsapp-button img {
-  width: 40px;
-  height: 40px;
-  margin: 10px 0;
+.contact-footer p {
+  margin: 5px 0;
 }
 
-.contact-hours-title {
-  font-size: 1.1rem;
-  margin-top: 10px;
-  font-weight: bold;
-}
-
-.contact-hours {
-  font-size: 0.9rem;
-}
 
 /* ================================= */
 /*  RESPONSIVIDADE */
