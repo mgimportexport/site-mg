@@ -1,47 +1,41 @@
 import "../styles/global.css";
+import { useLanguage } from "../context/useLanguage";
 
 const About = () => {
+  const { translations } = useLanguage();
+
   return (
     <section id="about" className="about">
-      <h2 className="about-title">About Us</h2>
+      <h2 className="about-title">{translations.about_title}</h2>
 
       {/* Primeira parte: Imagem e texto sobreposto */}
       <div className="about-top">
         <div className="about-image">
-          <img src="/building.jpg" alt="Business Building" />
+          <img src="/building.jpg" alt={translations.about_building_alt} />
         </div>
         <div className="about-text">
-          <p>
-            One of the largest consultants in the purchase of agricultural
-            commodities in Brazil since XXXX.
-          </p>
-          <p>We can easily connect the buyer with the product owner.</p>
+          <p>{translations.about_description_1}</p>
+          <p>{translations.about_description_2}</p>
         </div>
       </div>
 
       {/* Texto intermediário - Correção do alinhamento */}
       <div className="about-divider-container">
         <p className="about-divider-text">
-          Responsibly supplying the commodities that
+          {translations.about_divider_1}
         </p>
         <p className="about-divider-text">
-          are{" "}
-          <span className="about-divider-span">
-             fundamental to the building block of life.
-          </span>
+          <span className="about-divider-bold">{translations.about_divider_2}</span>
         </p>
       </div>
 
       {/* Segunda parte: Texto e imagem lateral */}
       <div className="about-bottom">
         <p className="about-bottom-text">
-          Moving goods out of a country also requires a lot of compliance
-          paperwork. Our enterprise provides a{" "}
-          <strong>complete logistics solution</strong> for your global supply
-          chain.
+          {translations.about_bottom}
         </p>
         <div className="about-secondary-image">
-          <img src="/warehouse.jpg" alt="Logistics Warehouse" />
+          <img src="/warehouse.jpg" alt={translations.about_warehouse_alt} />
         </div>
       </div>
     </section>
