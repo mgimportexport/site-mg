@@ -1,9 +1,13 @@
 import { Button, Input } from "antd";
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
+import { useLanguage } from "../context/useLanguage";
+
 import "../styles/global.css";
 
 const Contact = () => {
+  const { translations } = useLanguage(); // Obtém os textos traduzidos
+
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -38,13 +42,13 @@ const Contact = () => {
             formRef.current,
             { publicKey: "DiokJ1EDvMDkUI93D" }
           );
-          alert("E-mail enviado com sucesso!");
+          alert(translations.email_success);
           setName("");
           setEmail("");
           setMessage("");
           setFormSubmitted(false);
         } catch (error) {
-          alert("Erro ao enviar o e-mail!");
+          alert(translations.email_error);
           console.error("❌ Erro ao enviar:", error);
         } finally {
           setIsLoading(false);
@@ -56,27 +60,25 @@ const Contact = () => {
     }
   };
 
-
-
   return (
     <section id="contact" className="contact">
       <div className="contact-main">
         <div className="contact-form-container">
-          <h2 className="contact-title">Contact Us</h2>
+          <h2 className="contact-title">{translations.contact_title}</h2>
           <p className="contact-subtitle">
-            Send an e-mail to management@matogrossoexportltda.com
+            {translations.contact_subtitle}
           </p>
 
           <form ref={formRef} onSubmit={handleSubmit} className="contact-form">
             <div>
               <label htmlFor="name" className="contact-label">
-                <span className="required">* Name:</span>
+                <span className="required">* {translations.name_label}</span>
               </label>
               <Input
                 id="name"
                 name="user_name"
                 status={formSubmitted && errors.name ? "error" : ""}
-                placeholder="Personal or company"
+                placeholder={translations.name_placeholder}
                 value={name}
                 onChange={(e) => setName(e.target.value)}
               />
@@ -84,13 +86,13 @@ const Contact = () => {
 
             <div>
               <label htmlFor="email" className="contact-label">
-                Email:
+                {translations.email_label}
               </label>
               <Input
                 id="email"
                 name="user_email"
                 status={formSubmitted && errors.email ? "error" : ""}
-                placeholder="your email@"
+                placeholder={translations.email_placeholder}
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
@@ -99,13 +101,13 @@ const Contact = () => {
 
             <div>
               <label htmlFor="message" className="contact-label">
-                Message:
+                {translations.message_label}
               </label>
               <Input.TextArea
                 id="message"
                 name="message"
                 status={formSubmitted && errors.message ? "error" : ""}
-                placeholder="Message"
+                placeholder={translations.message_placeholder}
                 rows={3}
                 maxLength={100}
                 value={message}
@@ -120,9 +122,9 @@ const Contact = () => {
                 type="primary"
                 className="contact-submit"
                 loading={isLoading}
-                onClick={handleSubmit}
+                htmlType="submit"
               >
-                Submit
+                {isLoading ? translations.sending : translations.submit}
               </Button>
             </div>
           </form>
@@ -132,20 +134,7 @@ const Contact = () => {
 
       {/* Rodapé */}
       <div className="contact-footer">
-        <p
-          style={{
-            color: "#D3AF37",
-            fontFamily: "Roboto",
-            fontSize: "1.25rem",
-            fontWeight: 400,
-            lineHeight: "24px",
-            textUnderlinePosition: "from-font",
-            textDecorationSkipInk: "none",
-            marginBottom: "10px",
-          }}
-        >
-          Contact us via WhatsApp
-        </p>
+        <p className="contact-footer-title">{translations.whatsapp_title}</p>
         <Button
           type="link"
           href="https://wa.me/+5521967267984"
@@ -154,46 +143,11 @@ const Contact = () => {
         >
           <img src="/whatsapp-icon.svg" alt="WhatsApp" />
         </Button>
-        <p
-          style={{
-            fontFamily: "Roboto",
-            fontSize: "1.25rem",
-            fontWeight: 400,
-            lineHeight: "24px",
-            textUnderlinePosition: "from-font",
-            textDecorationSkipInk: "none",
-            marginBottom: "10px",
-          }}
-        >
-          Opening Hours:
-        </p>
-        <p
-          style={{
-            color: "#D3AF37",
-            fontFamily: "Roboto",
-            fontSize: "1rem",
-            fontWeight: 400,
-            lineHeight: "24px",
-          }}
-        >
-          Mon - Fri: 8:00 am - 6:00 pm
-        </p>
-        <p
-          style={{
-            color: "#D3AF37",
-            fontFamily: "Roboto",
-            fontSize: "1rem",
-            fontWeight: 400,
-            lineHeight: "24px",
-            textUnderlinePosition: "from-font",
-            textDecorationSkipInk: "none",
-            marginBottom: "10px",
-          }}
-        >
-          Saturday: 9:00 am - 7:00 pm
-        </p>
+        <p className="contact-footer-title">{translations.opening_hours}</p>
+        <p className="contact-footer-text">{translations.weekdays}</p>
+        <p className="contact-footer-text">{translations.saturday}</p>
         <p style={{ textAlign: "right", fontSize: "10px" }}>
-          Images by freepik.com
+          {translations.image_credit}
         </p>
       </div>
     </section>
