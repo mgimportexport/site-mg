@@ -2,16 +2,16 @@ import { useRef } from "react";
 import "../styles/global.css";
 
 const commoditiesData = [
-  { name: "Soybeans", description: "Today there is no other protein of vegetable origin with better cost benefit for the production of meats", image: "/public/soybeans.jpg" },
-  { name: "Brazilian Sugar", description: "Known today as white sugar is one of the most sought after by sugar importers worldwide.", image: "/public/sugar.jpg" },
-  { name: "Chicken Paw", description: "Chicken paws have a richer and deeper flavour profile.", image: "/public/chicken-paw.jpg" },
-  { name: "Aluminum", description: "It has properties such as lightness, resistance and durability.", image: "/public/aluminum.jpg" },
-  { name: "Wheat", description: "Grass widely cultivated for its seed, a cereal grain that is a staple food around the world.", image: "/public/wheat.jpg" },
-  { name: "Soybeans", description: "Today there is no other protein of vegetable origin with better cost benefit for the production of meats", image: "/public/soybeans.jpg" },
-  { name: "Brazilian Sugar", description: "Known today as white sugar is one of the most sought after by sugar importers worldwide.", image: "/public/sugar.jpg" },
-  { name: "Chicken Paw", description: "Chicken paws have a richer and deeper flavour profile.", image: "/public/chicken-paw.jpg" },
-  { name: "Aluminum", description: "It has properties such as lightness, resistance and durability.", image: "/public/aluminum.jpg" },
-  { name: "Wheat", description: "Grass widely cultivated for its seed, a cereal grain that is a staple food around the world.", image: "/public/wheat.jpg" },
+  { name: "Soybeans", description: "Today there is no other protein of vegetable origin with better cost benefit for the production of meats", image: "/soybeans.jpg" },
+  { name: "Brazilian Sugar", description: "Known today as white sugar is one of the most sought after by sugar importers worldwide.", image: "/sugar.jpg" },
+  { name: "Chicken Paw", description: "Chicken paws have a richer and deeper flavour profile.", image: "/chicken-paw.jpg" },
+  { name: "Aluminum", description: "It has properties such as lightness, resistance and durability.", image: "/aluminum.jpg" },
+  { name: "Wheat", description: "Grass widely cultivated for its seed, a cereal grain that is a staple food around the world.", image: "/wheat.jpg" },
+  // { name: "Soybeans", description: "Today there is no other protein of vegetable origin with better cost benefit for the production of meats", image: "/soybeans.jpg" },
+  // { name: "Brazilian Sugar", description: "Known today as white sugar is one of the most sought after by sugar importers worldwide.", image: "/sugar.jpg" },
+  // { name: "Chicken Paw", description: "Chicken paws have a richer and deeper flavour profile.", image: "/chicken-paw.jpg" },
+  // { name: "Aluminum", description: "It has properties such as lightness, resistance and durability.", image: "/aluminum.jpg" },
+  // { name: "Wheat", description: "Grass widely cultivated for its seed, a cereal grain that is a staple food around the world.", image: "/wheat.jpg" },
 ];
 
 const Commodities = () => {

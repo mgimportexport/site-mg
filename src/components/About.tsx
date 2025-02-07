@@ -8,7 +8,7 @@ const About = () => {
       {/* Primeira parte: Imagem e texto sobreposto */}
       <div className="about-top">
         <div className="about-image">
-          <img src="/public/building.jpg" alt="Business Building" />
+          <img src="/building.jpg" alt="Business Building" />
         </div>
         <div className="about-text">
           <p>
@@ -35,7 +35,7 @@ const About = () => {
           <strong>complete logistics solution</strong> for your global supply chain.
         </p>
         <div className="about-secondary-image">
-          <img src="/public/warehouse.jpg" alt="Logistics Warehouse" />
+          <img src="/warehouse.jpg" alt="Logistics Warehouse" />
         </div>
       </div>
     </section>
