@@ -107,36 +107,36 @@ section {
 .hero {
   height: 100vh;
   display: flex;
-  align-items: flex-end; /* Move o conteúdo para a parte inferior */
-  justify-content: flex-start; /* Alinha o conteúdo à esquerda */
+  align-items: flex-end;
+  justify-content: flex-start;
   text-align: left;
   background-image: url("/hero-image.jpg");
   background-size: cover;
   background-position: center;
   color: #EAD46C;
-  padding: 50px; /* Espaçamento interno para afastar o texto das bordas */
+  padding: 50px;
 }
 
 /* Conteúdo da hero */
 .hero-content {
-  padding-left: 50px; /* Mantém o espaçamento do texto */
-  padding-bottom: 30px; /* Ajusta para aproximar do rodapé */
+  padding-left: 50px;
+  padding-bottom: 30px;
 }
 
 /* Título principal */
 .hero-content-title {
-  font-size: 6rem;  /* Mantém 6rem, pois está correto */
-  font-weight: 400; /* Deixa o título mais "bold" */
-  font-style: italic !important; /* Mantém o itálico */
-  line-height: 1; /* Ajusta o espaçamento entre linhas */
+  font-size: 6rem;  
+  font-weight: 400; 
+  font-style: italic !important; 
+  line-height: 1; 
 }
 
 /* Subtítulo */
 .hero-content span {
-  font-size: 3rem; /* Diminui o tamanho do subtítulo */
-  font-weight: 400; /* Mantém o peso da fonte */
-  display: block; /* Mantém o comportamento de bloco */
-  margin-top: -65px; /* Aproxima do título */
+  font-size: 3rem;
+  font-weight: 400;
+  display: block;
+  margin-top: -65px;
 }
 /* ================================= */
 /*  ABOUT US */
@@ -160,16 +160,16 @@ section {
 /* PRIMEIRA SEÇÃO - Imagem grande e texto sobreposto */
 .about-top {
   position: relative;
-  width: 100vw; /* Faz a seção ocupar toda a largura da tela */
+  width: 100vw;
   max-width: 100%;
 }
 
 .about-image img {
   width: 100%;
-  height: 300px; /* Diminui a altura da imagem */
-  object-fit: cover; /* Evita distorções e mantém o recorte adequado */
-  border-radius: 0; /* Remove qualquer arredondamento */
-  display: block; /* Evita espaçamentos indesejados */
+  height: 300px;
+  object-fit: cover;
+  border-radius: 0;
+  display: block;
 }
 
 .about-text {
@@ -191,10 +191,10 @@ section {
 /* SEGUNDA SEÇÃO - Texto e imagem ao lado */
 
 .about-divider-container {
-  max-width: 100%; /* Mantém a largura consistente */
-  margin: 40px auto; /* Centraliza o bloco como um todo */
-  padding-right: 50px; /* Ajusta a distância da borda direita */
-  text-align: right; /* Garante que o texto fique alinhado à direita */
+  max-width: 100%;
+  margin: 40px auto;
+  padding-right: 50px;
+  text-align: right;
 }
 
 .about-divider-text {
@@ -203,22 +203,22 @@ section {
   font-weight: 300;
   font-family: Roboto;
   line-height: 1.1;
-  margin: 0; /* Remove margens extras */
+  margin: 0;
 }
 
 .about-divider-span {
-  font-size: 2.5rem; /* Deixa o segundo texto maior */
+  font-size: 2.5rem;
   font-weight: 500;
   color: #3b3b3b;
   font-family: Roboto;
   line-height: 40px;
-  margin-top: 5px; /* Espaço menor entre as frases */
+  margin-top: 5px;
 }
 .same-style {
-  font-size: inherit; /* Mantém o tamanho da fonte do texto principal */
-  font-weight: inherit; /* Mantém o peso da fonte */
-  font-style: inherit; /* Mantém qualquer estilo, como itálico */
-  white-space: nowrap; /* Evita que "are" quebre sozinho para uma terceira linha */
+  font-size: inherit;
+  font-weight: inherit;
+  font-style: inherit;
+  white-space: nowrap;
 }
 
 
@@ -263,7 +263,7 @@ section {
   position: relative;
   padding: 200px 20px;
   text-align: center;
-  background-image: url("/propose-bg.jpg"); /* Substitua pela sua imagem */
+  background-image: url("/propose-bg.jpg");
   background-size:   cover;
   background-position: center;
   color: #fff;
@@ -276,7 +276,7 @@ section {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.1); /* Overlay escuro */
+  background: rgba(0, 0, 0, 0.1);
   z-index: 1;
 }
 
@@ -289,10 +289,9 @@ section {
   position: relative;
   z-index: 2;
   margin-bottom: 40px;
-  text-align: left; /* Alinha o texto à esquerda */
-  padding-left: 20px; /* Adiciona um pequeno espaçamento da borda */
-  margin-top: -120px; /* Move o texto um pouco para cima */
-
+  text-align: left;
+  padding-left: 20px;
+  margin-top: -120px;
 }
 
 /* GRID DE CARDS */
@@ -308,8 +307,8 @@ section {
 
 /* ESTILIZAÇÃO DOS CARDS */
 .propose-card {
-  background: rgb(255, 255, 255, 0.4); /* Transparência para efeito sofisticado */
-  backdrop-filter: blur(5px); /* Efeito de desfoque */
+  background: rgb(255, 255, 255, 0.4);
+  backdrop-filter: blur(5px);
   padding: 20px;
   border-radius: 12px;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
@@ -360,8 +359,8 @@ section {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  position: relative; /* Permite posicionar os botões sobre o carrossel */
-  max-width: 100%; /* Define um limite para a largura */
+  position: relative;
+  max-width: 100%;
   margin: 0 auto;
 }
 
@@ -373,11 +372,11 @@ section {
   overflow-x: auto;
   scroll-behavior: smooth;
   max-width: 100%;
-  scrollbar-width: none; /* Oculta a barra de rolagem padrão */
+  scrollbar-width: none;
 }
 
 .commodities-grid::-webkit-scrollbar {
-  display: none; /* Oculta a barra de rolagem para navegadores WebKit */
+  display: none;
 }
 
 /* Cards de commodities */
@@ -453,7 +452,7 @@ section {
   display: flex;
   justify-content: space-between;
   align-items: stretch;
-  height: 80vh; /* Ajusta a altura sem remover o rodapé */
+  height: 80vh;
   min-height: 95vh;
 }
 
@@ -486,7 +485,7 @@ section {
 .contact-form div {
   display: flex;
   align-items: center;
-  gap: 10px; /* Espaço entre label e input */
+  gap: 10px;  
   margin-bottom: 10px;
 }
 
@@ -494,24 +493,24 @@ section {
   font-size: 1.25rem;
   font-weight: 400;
   color: #1E1E1E;
-  white-space: nowrap; /* Evita que o texto do label quebre linha */
-  width: 120px; /* Define uma largura fixa para alinhamento */
-  text-align: right; /* Alinha os rótulos corretamente */
+  white-space: nowrap; 
+  width: 120px; 
+  text-align: right; 
 }
 
 .contact-input,
 .contact-textarea {
-  flex: 1; /* Faz o input ocupar o restante do espaço disponível */
-  width: 80% !important; /* Permite ajuste dinâmico de largura */
+  flex: 1; 
+  width: 80% !important; 
 }
 
 .contact-textarea {
-  height: 100px; /* Ajuste a altura conforme necessário */
+  height: 100px; 
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 14px;
-  resize: none; /* Impede que o usuário redimensione */
+  resize: none; 
 }
 
 .char-counter {
@@ -527,7 +526,7 @@ section {
 
 .button-container {
   display: flex;
-  justify-content: flex-end; /* Alinha o botão à direita */
+  justify-content: flex-end; 
   margin-top: 10px;
 }
 
@@ -546,9 +545,9 @@ section {
 
 .contact-submit:hover,
 .contact-submit:focus {
-  background-color: #1F4037 !important; /* Mantém a cor original */
-  color: #D3AF37 !important; /* Mantém a cor do texto original */
-  opacity: 1; /* Garante que não haja mudança de opacidade */
+  background-color: #1F4037 !important;
+  color: #D3AF37 !important;
+  opacity: 1;
   border: none !important;
 }
 
@@ -603,11 +602,11 @@ section {
   }
 
   .logo img {
-    height: 60px; /* Reduzindo o tamanho da logo */
+    height: 60px;
   }
 
   .navbar-menu {
-    display: none; /* Esconde o menu para mobile (pode ser substituído por um ícone de hambúrguer) */
+    display: none;
   }
 
   .language-buttons {
@@ -637,7 +636,7 @@ section {
     height: auto;
     min-height: 30vh;
     display: flex;
-    align-items: flex-end; /* Mantém o conteúdo na parte inferior */
+    align-items: flex-end; 
     justify-content: flex-start;
     background-size: cover;
     background-position: center;
@@ -753,41 +752,41 @@ section {
 
 @media (max-width: 768px) {
   .propose {
-    padding: 50px 20px; /* Reduzir o padding para mobile */
+    padding: 50px 20px; 
   }
 
   .propose-title {
-    font-size: 2rem; /* Reduzir o tamanho da fonte */
-    margin-top: -30px; /* Ajustar a posição */
-    margin-bottom: 20px; /* Reduzir o espaçamento */
+    font-size: 2rem; 
+    margin-top: -30px; 
+    margin-bottom: 20px; 
   }
 
   .propose-grid {
-    display: flex; /* Mudar para flex para permitir scroll horizontal */
-    overflow-x: auto; /* Adicionar scroll horizontal */
-    gap: 15px; /* Reduzir o espaçamento entre os cards */
-    padding-bottom: 20px; /* Adicionar espaço para o scroll */
-    scroll-snap-type: x mandatory; /* Melhora a experiência de scroll */
+    display: flex; 
+    overflow-x: auto; 
+    gap: 15px; 
+    padding-bottom: 20px; 
+    scroll-snap-type: x mandatory; 
   }
 
   .propose-card {
-    flex: 0 0 auto; /* Impede que os cards se estiquem */
-    width: 80%; /* Define uma largura fixa para os cards */
-    scroll-snap-align: start; /* Melhora a experiência de scroll */
-    padding: 15px; /* Reduzir o padding dos cards */
-    transform: none !important; /* Remove o efeito de elevação */
+    flex: 0 0 auto; 
+    width: 80%; 
+    scroll-snap-align: start; 
+    padding: 15px; 
+    transform: none !important; 
   }
 
   .propose-card:hover {
-    transform: none !important; /* Remove o efeito de elevação no hover */
+    transform: none !important; 
   }
 
   .propose-number {
-    font-size: 1.2rem; /* Reduzir o tamanho da fonte */
+    font-size: 1.2rem; 
   }
 
   .propose-content {
-    font-size: 0.9rem; /* Reduzir o tamanho da fonte */
+    font-size: 0.9rem; 
   }
 }
 /* ================================= */
@@ -830,7 +829,7 @@ p {
 
 /* Remove o estilo azul padrão do Ant Design */
 .ant-menu-item::after {
-  border-bottom: none !important; /* Remove a borda azul padrão */
+  border-bottom: none !important;
 }
 /* Ajustando a cor do item ativo e do hover */
 .navbar-menu .ant-menu-item:hover,
@@ -847,6 +846,6 @@ p {
   left: 10%;
   width: 80%;
   height: 2px;
-  background: #c4a03c !important; /* Agora a linha tem a cor correta */
-  border-bottom: none !important; /* Forçando a remoção do estilo azul */
+  background: #c4a03c !important;
+  border-bottom: none !important;
 }
