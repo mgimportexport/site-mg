@@ -146,7 +146,7 @@ const Contact = () => {
         <p className="contact-footer-title">{translations.opening_hours}</p>
         <p className="contact-footer-text">{translations.weekdays}</p>
         <p className="contact-footer-text">{translations.saturday}</p>
-        <p style={{ textAlign: "right", fontSize: "10px" }}>
+        <p style={{ textAlign: window.innerWidth > 768 ? "right" : "center", fontSize: "10px" }}>
           {translations.image_credit}
         </p>
       </div>

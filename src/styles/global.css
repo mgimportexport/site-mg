@@ -817,6 +817,16 @@ section {
   .contact-image {
     display: none;
   }
+  .contact-footer{
+    flex-direction: column-reverse;
+  }
+  .contact-footer-title{
+    color: #D3AF37;
+  }
+  .contact-label{
+    font-size: 0.875rem;
+    font-weight: 400;
+  }
 } 
 
 /* ================================= */
