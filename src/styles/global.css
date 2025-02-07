@@ -7,10 +7,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 
 body {
-  font-family: "Roboto", sans-serif;
   background-color: #f8f8f8;
 }
 
@@ -59,11 +59,10 @@ section {
 
 /* Estilizando os itens do menu */
 .navbar-menu .ant-menu-item {
-  font-weight: 500;
-  font-size: 16px;
-  color: #c4a03c !important;
+  font-weight: 400;
+  font-size: 14px;
+  color: #1E1E1E !important;
   position: relative;
-  padding: 10px 15px;
   background: transparent !important;
   border: none !important;
 }
@@ -87,7 +86,7 @@ section {
   border-radius: 8px;
   font-weight: bold;
   background: transparent;
-  border: 1px solid #333;
+  border: 1px solid #3b3b3b;
   padding: 5px 12px;
 }
 
@@ -114,28 +113,30 @@ section {
   background-image: url("/hero-image.jpg");
   background-size: cover;
   background-position: center;
-  color: #ead46c;
+  color: #EAD46C;
   padding: 50px; /* Espaçamento interno para afastar o texto das bordas */
 }
 
 /* Conteúdo da hero */
 .hero-content {
-  margin-bottom: 100px; /* Ajusta a altura do texto */
   padding-left: 50px; /* Mantém o espaçamento do texto */
+  padding-bottom: 30px; /* Ajusta para aproximar do rodapé */
 }
 
 /* Título principal */
-.hero-content h1 {
-  font-size: 4rem;
-  font-weight: bold;
-  font-style: italic;
-  margin-bottom: 10px;
+.hero-content-title {
+  font-size: 6rem;  /* Mantém 6rem, pois está correto */
+  font-weight: 400; /* Deixa o título mais "bold" */
+  font-style: italic !important; /* Mantém o itálico */
+  line-height: 1; /* Ajusta o espaçamento entre linhas */
 }
 
 /* Subtítulo */
 .hero-content span {
-  font-size: 1.5rem;
-  display: block;
+  font-size: 3rem; /* Diminui o tamanho do subtítulo */
+  font-weight: 400; /* Mantém o peso da fonte */
+  display: block; /* Mantém o comportamento de bloco */
+  margin-top: -65px; /* Aproxima do título */
 }
 /* ================================= */
 /*  ABOUT US */
@@ -148,8 +149,8 @@ section {
 
 /* Título */
 .about-title {
-  font-size: 2rem;
-  font-weight: bold;
+  font-size: 3rem;
+  font-weight: 700;
   font-style: italic;
   color: #1e1e1e;
   margin-bottom: 40px;
@@ -177,13 +178,14 @@ section {
   right: 5%;
   transform: translateY(-50%);
   background: rgba(255, 255, 255, 0.9);
-  padding: 20px;
+  padding: 10px;
   border-radius: 8px;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
   max-width: 400px;
   text-align: left;
-  font-size: 1.1rem;
-  color: #333;
+  font-size: 2rem;
+  font-weight: 400;
+  color: #1e1e1e;
 }
 
 /* SEGUNDA SEÇÃO - Texto e imagem ao lado */
@@ -196,11 +198,11 @@ section {
 }
 
 .about-divider-text {
-  font-size: 1.6rem;
+  font-size: 2.5rem;
   color: #3b3b3b;
   font-weight: 300;
   font-family: Roboto;
-  line-height: 32px; /* Ajusta a altura entre linhas */
+  line-height: 1.1;
   margin: 0; /* Remove margens extras */
 }
 
@@ -211,6 +213,12 @@ section {
   font-family: Roboto;
   line-height: 40px;
   margin-top: 5px; /* Espaço menor entre as frases */
+}
+.same-style {
+  font-size: inherit; /* Mantém o tamanho da fonte do texto principal */
+  font-weight: inherit; /* Mantém o peso da fonte */
+  font-style: inherit; /* Mantém qualquer estilo, como itálico */
+  white-space: nowrap; /* Evita que "are" quebre sozinho para uma terceira linha */
 }
 
 
@@ -232,14 +240,16 @@ section {
 }
 
 .about-bottom-text {
-  font-size: 1.2rem;
-  color: #333;
-  max-width: 600px;
+  font-size: 2rem;
+  color: #3b3b3b;
+  font-weight: 400;
+  font-family: Roboto;
+  padding: 2rem;
 }
 
 .about-secondary-image img {
   width: 100%;
-  height: 300px;
+  height: 250px;
   min-width: 700px;
   border-radius: 12px;
   object-fit: cover;
@@ -271,15 +281,16 @@ section {
 }
 
 .propose-title {
-  font-size: 2.5rem;
-  font-weight: bold;
+  font-size: 3rem;
+  font-weight: 700;
   font-style: italic;
+  color: #1e1e1e;
+  font-family: Roboto;
   position: relative;
   z-index: 2;
   margin-bottom: 40px;
   text-align: left; /* Alinha o texto à esquerda */
   padding-left: 20px; /* Adiciona um pequeno espaçamento da borda */
-  color: #1E1E1E;
   margin-top: -120px; /* Move o texto um pouco para cima */
 
 }
@@ -297,19 +308,25 @@ section {
 
 /* ESTILIZAÇÃO DOS CARDS */
 .propose-card {
-  background: rgba(255, 255, 255, 0.5); /* Transparência para efeito sofisticado */
+  background: rgb(255, 255, 255, 0.4); /* Transparência para efeito sofisticado */
   backdrop-filter: blur(5px); /* Efeito de desfoque */
   padding: 20px;
   border-radius: 12px;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
   text-align: left;
-  color: #1E1E1E;
+  color: #1e1e1e;
 }
 
 /* NUMERAÇÃO DOS CARDS */
 .propose-number {
   font-size: 1.5rem;
-  font-weight: bold;
+  font-weight: 400;
+  display: block;
+  margin-bottom: 10px;
+}
+.propose-content {
+  font-size: 1rem;
+  font-weight: 400;
   display: block;
   margin-bottom: 10px;
 }
@@ -327,10 +344,11 @@ section {
 
 /* Título da seção */
 .commodities-title {
-  font-size: 2rem;
-  font-weight: bold;
+  font-size: 3rem;
+  font-weight: 700;
   font-style: italic;
   color: #1e1e1e;
+  font-family: Roboto;
   margin-bottom: 20px;
   padding-left: 20px;
   text-align: left;
@@ -381,13 +399,16 @@ section {
 }
 
 .commodity-card h3 {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   margin-top: 10px;
+  font-family: Roboto;
+  font-weight: 400;
   color: #1e1e1e;
 }
 
 .commodity-card p {
   font-size: 0.9rem;
+  font-weight: 400;
   color: #444;
 }
 
@@ -414,14 +435,6 @@ section {
 .carousel-btn:hover {
   background: #2a331f;
 }
-
-/* ================================= */
-/*  CONTACT */
-/* ================================= */
-
-/* ================================= */
-/*  CONTACT */
-/* ================================= */
 
 /* ================================= */
 /*  CONTACT */
@@ -456,15 +469,15 @@ section {
 }
 
 .contact-title {
-  font-size: 2rem;
-  font-weight: bold;
+  font-size: 3rem;
+  font-weight: 700;
   font-style: italic;
-  color: #1c2713;
+  color: #1e1e1e;
 }
 
 .contact-subtitle {
   margin-bottom: 20px;
-  font-size: 20px;
+  font-size: 1.25rem;
   color: #1E1E1E;
   font-family: Roboto;
   font-weight: 400;
@@ -478,8 +491,8 @@ section {
 }
 
 .contact-label {
-  font-size: 16px;
-  font-weight: bold;
+  font-size: 1.25rem;
+  font-weight: 400;
   color: #1E1E1E;
   white-space: nowrap; /* Evita que o texto do label quebre linha */
   width: 120px; /* Define uma largura fixa para alinhamento */
@@ -556,7 +569,7 @@ section {
 
 /* Rodapé do contato */
 .contact-footer {
-  background-color: #1c2713;
+  background-color: #1F4037;
   color: white;
   padding: 40px 20px;
   text-align: center;

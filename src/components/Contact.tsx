@@ -13,7 +13,7 @@ const Contact = () => {
     message: false,
   });
   const [formSubmitted, setFormSubmitted] = useState(false);
-  const [isLoading, setIsLoading] = useState(false); // Estado para controlar o loading do botão
+  const [isLoading, setIsLoading] = useState(false); 
   const formRef = useRef<HTMLFormElement | null>(null);
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -136,7 +136,7 @@ const Contact = () => {
           style={{
             color: "#D3AF37",
             fontFamily: "Roboto",
-            fontSize: "20px",
+            fontSize: "1.25rem",
             fontWeight: 400,
             lineHeight: "24px",
             textUnderlinePosition: "from-font",
@@ -157,7 +157,7 @@ const Contact = () => {
         <p
           style={{
             fontFamily: "Roboto",
-            fontSize: "20px",
+            fontSize: "1.25rem",
             fontWeight: 400,
             lineHeight: "24px",
             textUnderlinePosition: "from-font",
@@ -171,7 +171,7 @@ const Contact = () => {
           style={{
             color: "#D3AF37",
             fontFamily: "Roboto",
-            fontSize: "16px",
+            fontSize: "1rem",
             fontWeight: 400,
             lineHeight: "24px",
           }}
@@ -182,7 +182,7 @@ const Contact = () => {
           style={{
             color: "#D3AF37",
             fontFamily: "Roboto",
-            fontSize: "16px",
+            fontSize: "1rem",
             fontWeight: 400,
             lineHeight: "24px",
             textUnderlinePosition: "from-font",

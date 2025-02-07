@@ -5,24 +5,22 @@ import "../styles/global.css";
 const Navbar = () => {
     const [currentSection, setCurrentSection] = useState("about");
 
-    // Função para rolar suavemente para a seção e atualizar o menu ativo
     const scrollToSection = (id: string) => {
         const section = document.getElementById(id);
         if (section) {
-            const yOffset = -80; // Ajuste para compensar a navbar fixa
+            const yOffset = -80; 
             const y = section.getBoundingClientRect().top + window.scrollY + yOffset;
             window.scrollTo({ top: y, behavior: "smooth" });
             setCurrentSection(id);
         }
     };
 
-    // Detecta qual seção está visível ao rolar a página
     useEffect(() => {
         const sections = ["hero","about", "propose", "commodities", "contact"];
 
         const handleScroll = () => {
-            let current = "hero"; // Default para evitar erros
-            const scrollPosition = window.scrollY + 100; // Compensação da navbar
+            let current = "hero";
+            const scrollPosition = window.scrollY + 100;
 
             sections.forEach((section) => {
                 const sectionElement = document.getElementById(section);

@@ -42,7 +42,6 @@ const Commodities = () => {
             </div>
           ))}
         </div>
-        {/* Botões agora controlam o scroll da grade */}
         <div className="commodities-buttons">
           <button className="carousel-btn" onClick={scrollLeft}>{"<"}</button>
           <button className="carousel-btn" onClick={scrollRight}>{">"}</button>

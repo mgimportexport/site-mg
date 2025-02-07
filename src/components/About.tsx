@@ -12,7 +12,8 @@ const About = () => {
         </div>
         <div className="about-text">
           <p>
-            One of the largest consultants in the purchase of agricultural commodities in Brazil since XXXX.
+            One of the largest consultants in the purchase of agricultural
+            commodities in Brazil since XXXX.
           </p>
           <p>We can easily connect the buyer with the product owner.</p>
         </div>
@@ -21,18 +22,23 @@ const About = () => {
       {/* Texto intermediário - Correção do alinhamento */}
       <div className="about-divider-container">
         <p className="about-divider-text">
-          Responsibly supplying the commodities that are
+          Responsibly supplying the commodities that
         </p>
-        <p className="about-divider-span">
-          fundamental to the building block of life.
+        <p className="about-divider-text">
+          are{" "}
+          <span className="about-divider-span">
+             fundamental to the building block of life.
+          </span>
         </p>
       </div>
 
       {/* Segunda parte: Texto e imagem lateral */}
       <div className="about-bottom">
         <p className="about-bottom-text">
-          Moving goods out of a country also requires a lot of compliance paperwork. Our enterprise provides a{" "}
-          <strong>complete logistics solution</strong> for your global supply chain.
+          Moving goods out of a country also requires a lot of compliance
+          paperwork. Our enterprise provides a{" "}
+          <strong>complete logistics solution</strong> for your global supply
+          chain.
         </p>
         <div className="about-secondary-image">
           <img src="/warehouse.jpg" alt="Logistics Warehouse" />
