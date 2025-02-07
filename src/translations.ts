@@ -27,6 +27,14 @@ export const translations = {
       propose_3_desc: "In today's globalized world, chances are you are interacting with people from more than just one country. This is where our multilingual functionality comes into play. Take advantage of this unique capability to expand your reach.",
       propose_4_title: "Advanced Tech",
       propose_4_desc: "We are constantly working to improve our offerings and expand upon our technological capabilities. Our expert team of professionals is passionate about developing the most advanced tech on the market. Ready to experience the future? Get in touch.",
+      commodities_title: "Commodities",
+      commodities_data: [
+        { name: "Soybeans", description: "Today there is no other protein of vegetable origin with better cost benefit for the production of meats.", image: "/soybeans.jpg" },
+        { name: "Brazilian Sugar", description: "Known today as white sugar, it is one of the most sought after by sugar importers worldwide.", image: "/sugar.jpg" },
+        { name: "Chicken Paw", description: "Chicken paws have a richer and deeper flavour profile.", image: "/chicken-paw.jpg" },
+        { name: "Aluminum", description: "It has properties such as lightness, resistance, and durability.", image: "/aluminum.jpg" },
+        { name: "Wheat", description: "Grass widely cultivated for its seed, a cereal grain that is a staple food around the world.", image: "/wheat.jpg" },
+      ],
     },
     FR: {
       about: "À propos",
@@ -55,7 +63,14 @@ export const translations = {
       propose_3_desc: "Dans le monde globalisé d'aujourd'hui, il y a de fortes chances que vous interagissiez avec des personnes de plusieurs pays. C'est là qu'intervient notre fonctionnalité multilingue. Profitez de cette capacité unique pour élargir votre portée.",
       propose_4_title: "Technologie Avancée",
       propose_4_desc: "Nous travaillons constamment à améliorer nos offres et à élargir nos capacités technologiques. Notre équipe d'experts est passionnée par le développement des technologies les plus avancées du marché. Prêt à expérimenter le futur ? Contactez-nous.",
-    
+      commodities_title: "Marchandises",
+      commodities_data: [
+        { name: "Soja", description: "Aujourd'hui, il n'existe pas d'autre protéine d'origine végétale avec un meilleur rapport coût-bénéfice pour la production de viandes.", image: "/soybeans.jpg" },
+        { name: "Sucre Brésilien", description: "Connu aujourd'hui sous le nom de sucre blanc, il est l'un des plus recherchés par les importateurs de sucre dans le monde entier.", image: "/sugar.jpg" },
+        { name: "Pattes de Poulet", description: "Les pattes de poulet ont un profil de saveur plus riche et plus profond.", image: "/chicken-paw.jpg" },
+        { name: "Aluminium", description: "Il possède des propriétés telles que la légèreté, la résistance et la durabilité.", image: "/aluminum.jpg" },
+        { name: "Blé", description: "Une céréale largement cultivée pour ses graines, qui est une denrée alimentaire de base dans le monde entier.", image: "/wheat.jpg" },
+      ],
     },
     ES: {
       about: "Sobre Nosotros",
@@ -84,7 +99,14 @@ export const translations = {
       propose_3_desc: "En el mundo globalizado de hoy, es probable que interactúes con personas de más de un país. Aquí es donde entra en juego nuestra funcionalidad multilingüe. Aprovecha esta capacidad única para expandir tu alcance.",
       propose_4_title: "Tecnología Avanzada",
       propose_4_desc: "Trabajamos constantemente para mejorar nuestras ofertas y ampliar nuestras capacidades tecnológicas. Nuestro equipo de expertos está apasionado por desarrollar la tecnología más avanzada del mercado. ¿Listo para experimentar el futuro? Contáctanos.",
-   
+      commodities_title: "Productos",
+      commodities_data: [
+        { name: "Soja", description: "Hoy en día no existe otra proteína de origen vegetal con mejor relación costo-beneficio para la producción de carnes.", image: "/soybeans.jpg" },
+        { name: "Azúcar Brasileño", description: "Conocido hoy como azúcar blanco, es uno de los más buscados por los importadores de azúcar en todo el mundo.", image: "/sugar.jpg" },
+        { name: "Patas de Pollo", description: "Las patas de pollo tienen un perfil de sabor más rico y profundo.", image: "/chicken-paw.jpg" },
+        { name: "Aluminio", description: "Tiene propiedades como ligereza, resistencia y durabilidad.", image: "/aluminum.jpg" },
+        { name: "Trigo", description: "Hierba ampliamente cultivada por su semilla, un grano de cereal que es un alimento básico en todo el mundo.", image: "/wheat.jpg" },
+      ],
     },
   };
   

@@ -1,20 +1,9 @@
 import { useRef } from "react";
+import { useLanguage } from "../context/useLanguage";
 import "../styles/global.css";
 
-const commoditiesData = [
-  { name: "Soybeans", description: "Today there is no other protein of vegetable origin with better cost benefit for the production of meats", image: "/soybeans.jpg" },
-  { name: "Brazilian Sugar", description: "Known today as white sugar is one of the most sought after by sugar importers worldwide.", image: "/sugar.jpg" },
-  { name: "Chicken Paw", description: "Chicken paws have a richer and deeper flavour profile.", image: "/chicken-paw.jpg" },
-  { name: "Aluminum", description: "It has properties such as lightness, resistance and durability.", image: "/aluminum.jpg" },
-  { name: "Wheat", description: "Grass widely cultivated for its seed, a cereal grain that is a staple food around the world.", image: "/wheat.jpg" },
-  // { name: "Soybeans", description: "Today there is no other protein of vegetable origin with better cost benefit for the production of meats", image: "/soybeans.jpg" },
-  // { name: "Brazilian Sugar", description: "Known today as white sugar is one of the most sought after by sugar importers worldwide.", image: "/sugar.jpg" },
-  // { name: "Chicken Paw", description: "Chicken paws have a richer and deeper flavour profile.", image: "/chicken-paw.jpg" },
-  // { name: "Aluminum", description: "It has properties such as lightness, resistance and durability.", image: "/aluminum.jpg" },
-  // { name: "Wheat", description: "Grass widely cultivated for its seed, a cereal grain that is a staple food around the world.", image: "/wheat.jpg" },
-];
-
 const Commodities = () => {
+  const { translations } = useLanguage();
   const scrollRef = useRef<HTMLDivElement>(null);
 
   const scrollLeft = () => {
@@ -31,10 +20,11 @@ const Commodities = () => {
 
   return (
     <section id="commodities" className="commodities">
-      <h2 className="commodities-title">Commodities</h2>
+      <h2 className="commodities-title">{translations.commodities_title}</h2>
       <div className="commodities-container">
         <div ref={scrollRef} className="commodities-grid">
-          {commoditiesData.map((item, index) => (
+          {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
+          {translations.commodities_data.map((item: any, index: number) => (
             <div key={index} className="commodity-card">
               <img src={item.image} alt={item.name} />
               <h3>{item.name}</h3>
