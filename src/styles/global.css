@@ -627,6 +627,50 @@ section {
     border: 1px solid #1c2713;
   }
 }
+  
+/* ================================= */
+/*  RESPONSIVIDADE PARA HERO SECTION */
+/* ================================= */
+
+@media (max-width: 768px) {
+  .hero {
+    height: auto;
+    min-height: 30vh;
+    display: flex;
+    align-items: flex-end; /* Mantém o conteúdo na parte inferior */
+    justify-content: flex-start;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    
+
+  }
+
+  .hero-content {
+    position: absolute;
+    bottom: 30px;
+    left: 20px;
+    padding: 10px;
+    
+  }
+
+  .hero-content-title {
+    font-size: 1.5rem;
+    text-align: left;
+    font-style: italic;
+    font-weight: 400;
+  }
+
+  .hero-content span {
+    font-size: 1.5rem;
+    margin-top: -20px;
+  }
+  
+  .whatsapp-button-container {
+    display: none;
+  }
+}
 
 /* ================================= */
 /*  ANIMAÇÕES */
