@@ -671,7 +671,81 @@ section {
     display: none;
   }
 }
+/* ================================= */
+/*  RESPONSIVIDADE PARA ABOUT SECTION */
+/* ================================= */
 
+@media (max-width: 768px) {
+  .about {
+    padding: 20px 0px;
+  }
+
+  .about-title {
+    font-size: 2rem;
+    text-align: left;
+    padding-left: 20px;
+  }
+
+  .about-top {
+    padding: 0px;
+  }
+
+  .about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 0px;
+  }
+
+  .about-text {
+    width: 90%;
+    padding: 15px;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-top: 10px;
+  }
+
+  .about-text-2 {
+    font-weight: 400;
+  }
+
+  .about-divider-container {
+    text-align: center;
+    padding-left: 10%;
+    font-size: 1.0rem;
+  }
+
+  .about-divider-text {
+    font-size: 1.0rem;
+  }
+
+  .about-divider-bold {
+    font-weight: 400;
+  }
+
+  .about-bottom {
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+    margin: 0px;
+    background-color: transparent;
+    box-shadow: none;
+  }
+
+  .about-bottom-text {
+    font-size: 1.5rem;
+    padding: 1rem;
+    
+  }
+
+  .about-secondary-image img {
+    width: 100%;
+    min-width: auto;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 2px 2px  rgba(0, 0, 0, 0.5);
+  }
+}
 /* ================================= */
 /*  ANIMAÇÕES */
 /* ================================= */

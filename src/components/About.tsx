@@ -8,14 +8,16 @@ const About = () => {
     <section id="about" className="about">
       <h2 className="about-title">{translations.about_title}</h2>
 
-      {/* Primeira parte: Imagem e texto sobreposto */}
+      {/* Primeira parte: Imagem e texto abaixo */}
       <div className="about-top">
         <div className="about-image">
           <img src="/building.jpg" alt={translations.about_building_alt} />
         </div>
         <div className="about-text">
           <p>{translations.about_description_1}</p>
-          <p>{translations.about_description_2}</p>
+          <div className="about-text-2">
+            <p>{translations.about_description_2}</p>
+          </div>
         </div>
       </div>
 
