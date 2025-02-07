@@ -1,9 +1,12 @@
 import { useEffect, useState } from "react";
 import { Menu, Button } from "antd";
 import "../styles/global.css";
+import { useLanguage } from "../context/useLanguage";
+
 
 const Navbar = () => {
     const [currentSection, setCurrentSection] = useState("about");
+    const { language, changeLanguage, translations } = useLanguage();
 
     const scrollToSection = (id: string) => {
         const section = document.getElementById(id);
@@ -54,27 +57,42 @@ const Navbar = () => {
                     mode="horizontal"
                     className="navbar-menu"
                     selectedKeys={[currentSection]}
-                    style={{ borderBottom: "none" }} /* Remove a borda azul do Ant Design */
+                    style={{ borderBottom: "none" }} 
                 >
                     <Menu.Item key="about" onClick={() => scrollToSection("about")}>
-                        About Us
+                        {translations.about}
                     </Menu.Item>
                     <Menu.Item key="propose" onClick={() => scrollToSection("propose")}>
-                        Our Propose
+                        {translations.propose}
                     </Menu.Item>
                     <Menu.Item key="commodities" onClick={() => scrollToSection("commodities")}>
-                        Commodities
+                        {translations.commodities}
                     </Menu.Item>
                     <Menu.Item key="contact" onClick={() => scrollToSection("contact")}>
-                        Contact Us
+                        {translations.contact}
                     </Menu.Item>
                 </Menu>
 
                 {/* Botões de idioma */}
                 <div className="language-buttons">
-                    <Button className="lang-button active">EN</Button>
-                    <Button className="lang-button">FR</Button>
-                    <Button className="lang-button">ES</Button>
+                    <Button 
+                        className={`lang-button ${language === "EN" ? "active" : ""}`} 
+                        onClick={() => changeLanguage("EN")}
+                    >
+                        EN
+                    </Button>
+                    <Button 
+                        className={`lang-button ${language === "FR" ? "active" : ""}`} 
+                        onClick={() => changeLanguage("FR")}
+                    >
+                        FR
+                    </Button>
+                    <Button 
+                        className={`lang-button ${language === "ES" ? "active" : ""}`} 
+                        onClick={() => changeLanguage("ES")}
+                    >
+                        ES
+                    </Button>
                 </div>
             </div>
         </div>
