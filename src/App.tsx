@@ -5,11 +5,11 @@ import About from "./components/About";
 import Propose from "./components/Propose";
 import Commodities from "./components/Commodities";
 import Contact from "./components/Contact";
+import { LanguageProvider } from "./context/LanguageProvider"; // ✅ Caminho correto
 
 const App = () => {
   return (
-    <>
-      {/* Define o título e o ícone da aba */}
+    <LanguageProvider>
       <Helmet>
         <title>MG</title>
         <link rel="icon" type="image/svg+xml" href="/logo.svg" />
@@ -31,7 +31,7 @@ const App = () => {
       <section id="contact">
         <Contact />
       </section>
-    </>
+    </LanguageProvider>
   );
 };
 
