@@ -111,7 +111,7 @@ section {
   align-items: flex-end; /* Move o conteúdo para a parte inferior */
   justify-content: flex-start; /* Alinha o conteúdo à esquerda */
   text-align: left;
-  background-image: url("/public/hero-image.jpg");
+  background-image: url("/hero-image.jpg");
   background-size: cover;
   background-position: center;
   color: #ead46c;
@@ -253,7 +253,7 @@ section {
   position: relative;
   padding: 200px 20px;
   text-align: center;
-  background-image: url("/public/propose-bg.jpg"); /* Substitua pela sua imagem */
+  background-image: url("/propose-bg.jpg"); /* Substitua pela sua imagem */
   background-size:   cover;
   background-position: center;
   color: #fff;
@@ -550,7 +550,7 @@ section {
 /* Imagem lateral */
 .contact-image {
   flex: 1;
-  background: url("/public/contact-image.jpg") center/cover no-repeat;
+  background: url("/contact-image.jpg") center/cover no-repeat;
   margin-top: 80px;
 }
 

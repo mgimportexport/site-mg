@@ -1,9 +1,62 @@
 import { Button, Input } from "antd";
-import { useState } from "react";
+import { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 import "../styles/global.css";
 
 const Contact = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [errors, setErrors] = useState({
+    name: false,
+    email: false,
+    message: false,
+  });
+  const [formSubmitted, setFormSubmitted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false); // Estado para controlar o loading do botão
+  const formRef = useRef<HTMLFormElement | null>(null);
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setFormSubmitted(true);
+  
+    const newErrors = {
+      name: name.trim() === "",
+      email: email.trim() === "" || !/\S+@\S+\.\S+/.test(email),
+      message: message.trim() === "",
+    };
+  
+    setErrors(newErrors);
+  
+    if (!newErrors.name && !newErrors.email && !newErrors.message) {
+      setIsLoading(true);
+      if (formRef.current) {
+        try {
+          await emailjs.sendForm(
+            "contatositemgimports",
+            "template_92mwpuk",
+            formRef.current,
+            { publicKey: "DiokJ1EDvMDkUI93D" }
+          );
+          alert("E-mail enviado com sucesso!");
+          setName("");
+          setEmail("");
+          setMessage("");
+          setFormSubmitted(false);
+        } catch (error) {
+          alert("Erro ao enviar o e-mail!");
+          console.error("❌ Erro ao enviar:", error);
+        } finally {
+          setIsLoading(false);
+        }
+      } else {
+        console.error("❌ formRef.current está NULL!");
+        setIsLoading(false);
+      }
+    }
+  };
+
+
 
   return (
     <section id="contact" className="contact">
@@ -14,15 +67,18 @@ const Contact = () => {
             Send an e-mail to management@matogrossoexportltda.com
           </p>
 
-          <div className="contact-form">
+          <form ref={formRef} onSubmit={handleSubmit} className="contact-form">
             <div>
               <label htmlFor="name" className="contact-label">
                 <span className="required">* Name:</span>
               </label>
               <Input
                 id="name"
-                className="contact-input"
+                name="user_name"
+                status={formSubmitted && errors.name ? "error" : ""}
                 placeholder="Personal or company"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
               />
             </div>
 
@@ -32,9 +88,12 @@ const Contact = () => {
               </label>
               <Input
                 id="email"
-                className="contact-input"
+                name="user_email"
+                status={formSubmitted && errors.email ? "error" : ""}
                 placeholder="your email@"
                 type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
               />
             </div>
 
@@ -44,7 +103,8 @@ const Contact = () => {
               </label>
               <Input.TextArea
                 id="message"
-                className="contact-textarea"
+                name="message"
+                status={formSubmitted && errors.message ? "error" : ""}
                 placeholder="Message"
                 rows={3}
                 maxLength={100}
@@ -56,13 +116,17 @@ const Contact = () => {
             <div className="char-counter">{message.length} / 100</div>
 
             <div className="button-container">
-              <Button type="primary" className="contact-submit">
+              <Button
+                type="primary"
+                className="contact-submit"
+                loading={isLoading}
+                onClick={handleSubmit}
+              >
                 Submit
               </Button>
             </div>
-          </div>
+          </form>
         </div>
-
         <div className="contact-image"></div>
       </div>
 
