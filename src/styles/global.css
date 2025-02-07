@@ -790,6 +790,36 @@ section {
   }
 }
 /* ================================= */
+/*  RESPONSIVIDADE PARA CONTACT SECTION */
+/* ================================= */
+
+@media (max-width: 768px) {
+  .contact-main {
+    flex-direction: column;
+    height: auto;
+    min-height: auto;
+  }
+  .contact-form-container {
+    margin-top: 0px;
+  }
+  .contact-title{
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-style: italic;
+    color: #1e1e1e;
+  }
+  .contact-subtitle {
+    font-size: 1rem;
+    color: #1E1E1E;
+    font-family: Roboto;
+    font-weight: 400;
+  }
+  .contact-image {
+    display: none;
+  }
+} 
+
+/* ================================= */
 /*  ANIMAÇÕES */
 /* ================================= */
 
