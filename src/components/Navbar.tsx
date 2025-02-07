@@ -48,7 +48,7 @@ const Navbar = () => {
             <div className="navbar-content">
                 {/* Logo */}
                 <div className="logo">
-                    <img src="/public/logo.svg" alt="MG Logo" />
+                    <img src="/logo.svg" alt="MG Logo" />
                 </div>
 
                 {/* Menu */}
