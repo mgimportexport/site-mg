@@ -84,11 +84,11 @@ const Contact = () => {
         </p>
         <Button
           type="link"
-          href="https://wa.me/YOUR_NUMBER"
+          href="https://wa.me/+5521967267984"
           target="_blank"
           style={{ marginBottom: "30px" }}
         >
-          <img src="/public/whatsapp-icon.svg" alt="WhatsApp" />
+          <img src="/whatsapp-icon.svg" alt="WhatsApp" />
         </Button>
         <p
           style={{
