@@ -592,64 +592,39 @@ section {
 
 @media (max-width: 768px) {
   .navbar {
-    padding: 5px 0;
+    padding: 10px 0;
   }
 
-  .hero {
-    height: 80vh;
-    padding: 20px;
+  .navbar-content {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
   }
 
-  .propose-grid {
-    grid-template-columns: repeat(1, 1fr);
+  .logo img {
+    height: 60px; /* Reduzindo o tamanho da logo */
   }
 
-  .commodities-grid {
-    flex-wrap: wrap;
-    justify-content: center;
+  .navbar-menu {
+    display: none; /* Esconde o menu para mobile (pode ser substituído por um ícone de hambúrguer) */
   }
 
-  .commodity-card {
-    width: 90%;
-    max-width: 300px;
+  .language-buttons {
+    display: flex;
+    gap: 5px;
   }
 
-  .contact-form {
-    width: 90%;
-  }
-  .about-content {
-    flex-direction: column;
-    position: static;
+  .lang-button {
+    padding: 5px 10px;
+    font-size: 12px;
+    border-radius: 6px;
   }
 
-  .about-text {
-    position: static;
-    max-width: 100%;
-  }
-
-  .about-secondary {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .about-secondary p {
-    text-align: center;
-  }
-  .about-bottom {
-    flex-direction: column;
-    text-align: center;
-    padding: 20px;
-  }
-
-  .about-bottom-text {
-    max-width: 100%;
-  }
-
-  .about-secondary-image img {
-    max-width: 100%;
-  }
-  .propose-grid {
-    grid-template-columns: repeat(1, 1fr);
+  .lang-button.active {
+    background: #1c2713;
+    color: white;
+    border: 1px solid #1c2713;
   }
 }
 
