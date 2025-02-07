@@ -746,6 +746,50 @@ section {
     box-shadow: 2px 2px  rgba(0, 0, 0, 0.5);
   }
 }
+
+/* ================================= */
+/*  RESPONSIVIDADE PARA PROPOSE SECTION */
+/* ================================= */
+
+@media (max-width: 768px) {
+  .propose {
+    padding: 50px 20px; /* Reduzir o padding para mobile */
+  }
+
+  .propose-title {
+    font-size: 2rem; /* Reduzir o tamanho da fonte */
+    margin-top: -30px; /* Ajustar a posição */
+    margin-bottom: 20px; /* Reduzir o espaçamento */
+  }
+
+  .propose-grid {
+    display: flex; /* Mudar para flex para permitir scroll horizontal */
+    overflow-x: auto; /* Adicionar scroll horizontal */
+    gap: 15px; /* Reduzir o espaçamento entre os cards */
+    padding-bottom: 20px; /* Adicionar espaço para o scroll */
+    scroll-snap-type: x mandatory; /* Melhora a experiência de scroll */
+  }
+
+  .propose-card {
+    flex: 0 0 auto; /* Impede que os cards se estiquem */
+    width: 80%; /* Define uma largura fixa para os cards */
+    scroll-snap-align: start; /* Melhora a experiência de scroll */
+    padding: 15px; /* Reduzir o padding dos cards */
+    transform: none !important; /* Remove o efeito de elevação */
+  }
+
+  .propose-card:hover {
+    transform: none !important; /* Remove o efeito de elevação no hover */
+  }
+
+  .propose-number {
+    font-size: 1.2rem; /* Reduzir o tamanho da fonte */
+  }
+
+  .propose-content {
+    font-size: 0.9rem; /* Reduzir o tamanho da fonte */
+  }
+}
 /* ================================= */
 /*  ANIMAÇÕES */
 /* ================================= */
