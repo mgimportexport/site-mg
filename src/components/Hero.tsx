@@ -10,7 +10,9 @@ const Hero = () => {
       <div className="hero-content">
         <h1 className="hero-content-title">{translations.hero_title}</h1>
         <span>{translations.hero_subtitle}</span>
-        <WhatsAppButton  text="" />
+       <div className="whatsapp-button-container">
+       <WhatsAppButton  text="" />
+       </div>
       </div>
     </section>
   );
