@@ -72,7 +72,7 @@ const Contact = () => {
           <form ref={formRef} onSubmit={handleSubmit} className="contact-form">
             <div>
               <label htmlFor="name" className="contact-label">
-                <span className="required">* {translations.name_label}</span>
+                <span className="required"><span className="contact-required-star">*</span> {translations.name_label}</span>
               </label>
               <Input
                 id="name"

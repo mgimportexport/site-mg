@@ -37,7 +37,7 @@ const About = () => {
           {translations.about_bottom}
         </p>
         <div className="about-secondary-image">
-          <img src="/warehouse.jpg" alt={translations.about_warehouse_alt} />
+          <img src="/warehouse-2.jpg" alt={translations.about_warehouse_alt} />
         </div>
       </div>
     </section>
