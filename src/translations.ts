@@ -2,7 +2,7 @@
 export const translations = {
   EN: {
     about: "About Us",
-    propose: "Our Propose",
+    propose: "Our Proposal",
     commodities: "Commodities",
     contact: "Contact Us",
     welcome: "Filling",
@@ -21,7 +21,7 @@ export const translations = {
     about_bottom:
       "Moving goods out of a country also requires a lot of compliance paperwork. Our enterprise provides a complete logistics solution for your global supply chain.",
     about_warehouse_alt: "Logistics Warehouse",
-    propose_title: "Our Propose",
+    propose_title: "Our Proposal",
     propose_1_title: "Eco-Friendly Design",
     propose_1_desc:
       "We would not be who we are without our eco-friendly design, which is at the core of our strategy. We are constantly working to improve our offerings and expand upon our capabilities when it comes to design and production. Get in touch to learn more.",
