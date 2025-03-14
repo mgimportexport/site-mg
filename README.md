@@ -44,6 +44,4 @@ Os deploys podem ser monitorados no painel da Vercel, onde logs de erro e status
 ## 📞 Contato Técnico
 Em caso de dúvidas ou problemas, entre em contato com a equipe técnica responsável pelo projeto.
 
----
-⚠ **Nota:** Este README não contém informações sensíveis. Para credenciais ou detalhes internos, consulte a documentação interna do projeto.
 
