@@ -1,50 +1,49 @@
-# React + TypeScript + Vite
+# Site MG Imports
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📌 Sobre o Projeto
+Este repositório contém o código-fonte do site da MG Imports, uma plataforma voltada para importação e exportação de produtos.
 
-Currently, two official plugins are available:
+## 🌐 Status do Projeto
+- **Produção:** [MG Imports](https://www.mgimportexport.com/)
+- **Hospedagem:** Vercel ([Acesse aqui](https://site-mg.vercel.app/))
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Tecnologias Utilizadas
+- **Front-end:** react
+- **Hospedagem:** Vercel
+- **Controle de Versão:** GitHub
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 🛠 Configuração do Projeto
+### 🔽 Clonando o Repositório
+```bash
+git clone https://github.com/mgimportexport/site-mg.git
+cd site-mg
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+### 📦 Instalando Dependências
+```bash
+npm install  # ou yarn install
 ```
+
+### ▶️ Executando Localmente
+```bash
+npm run dev  # ou yarn dev
+```
+O site estará disponível em `http://localhost:3000` (ou outra porta configurada).
+
+## 📦 Deploy e Atualizações
+O site está configurado para **deploys automáticos** via Vercel. Sempre que um novo commit for enviado para o repositório principal, a Vercel iniciará um novo deploy.
+
+### 🔄 Fluxo de Desenvolvimento
+1. Alterar o código-fonte localmente no repositório clonado.
+2. Fazer commit e push das alterações para o GitHub.
+3. A Vercel detectará automaticamente as mudanças e iniciará o novo deploy.
+
+### 📊 Monitoramento de Deploys
+Os deploys podem ser monitorados no painel da Vercel, onde logs de erro e status podem ser consultados.
+
+## 📞 Contato Técnico
+Em caso de dúvidas ou problemas, entre em contato com a equipe técnica responsável pelo projeto.
+
+---
+⚠ **Nota:** Este README não contém informações sensíveis. Para credenciais ou detalhes internos, consulte a documentação interna do projeto.
+
