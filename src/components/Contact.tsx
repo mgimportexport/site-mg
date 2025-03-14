@@ -137,7 +137,7 @@ const Contact = () => {
         <p className="contact-footer-title">{translations.whatsapp_title}</p>
         <Button
           type="link"
-          href="https://wa.me/+5521967267984"
+          href="https://wa.me/+5521989841976"
           target="_blank"
           style={{ marginBottom: "30px" }}
         >
